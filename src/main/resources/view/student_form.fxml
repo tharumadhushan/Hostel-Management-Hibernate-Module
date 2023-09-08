@@ -11,6 +11,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane prefHeight="666.0" prefWidth="1150.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
    <children>
@@ -19,10 +20,27 @@
             <Font name="Courier New Bold Italic" size="31.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="studentid" layoutX="365.0" layoutY="148.0" prefHeight="25.0" prefWidth="199.0" promptText="Enter Student Id..." unFocusColor="#adadad" />
-      <JFXTextField fx:id="studentcontact" layoutX="365.0" layoutY="236.0" prefHeight="25.0" prefWidth="199.0" promptText="Enter Student Contact" unFocusColor="#b2b2b2" />
-      <JFXTextField fx:id="studentaddress" layoutX="890.0" layoutY="148.0" prefHeight="25.0" prefWidth="199.0" promptText="Enter Student Address..." unFocusColor="#b2b2b2" />
-      <JFXTextField fx:id="studentname" layoutX="624.0" layoutY="148.0" prefHeight="25.0" prefWidth="199.0" promptText="Enter Student Name... " unFocusColor="#b2b2b2" />
+      <TextFlow layoutX="365.0" layoutY="148.0">
+         <children>
+            <JFXTextField fx:id="studentid" prefHeight="25.0" prefWidth="199.0" unFocusColor="#adadad">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </TextFlow>
+      <JFXTextField fx:id="studentcontact" layoutX="365.0" layoutY="236.0" prefHeight="25.0" prefWidth="199.0" unFocusColor="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="studentaddress" layoutX="890.0" layoutY="148.0" prefHeight="25.0" prefWidth="199.0" unFocusColor="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="studentname" layoutX="624.0" layoutY="148.0" prefHeight="25.0" prefWidth="199.0" unFocusColor="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></JFXTextField>
       <JFXButton layoutX="449.0" layoutY="333.0" onAction="#btnClearOnAction" text="Clear" />
       <JFXButton layoutX="549.0" layoutY="333.0" onAction="#btnSaveOnAction" text="Save" />
       <JFXButton layoutX="661.0" layoutY="333.0" onAction="#btnDeleteOnAction" text="Delete" />
