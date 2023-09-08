@@ -41,11 +41,26 @@
          <font>
             <Font name="System Italic" size="12.0" />
          </font></JFXTextField>
-      <JFXButton layoutX="449.0" layoutY="333.0" onAction="#btnClearOnAction" text="Clear" />
-      <JFXButton layoutX="549.0" layoutY="333.0" onAction="#btnSaveOnAction" text="Save" />
-      <JFXButton layoutX="661.0" layoutY="333.0" onAction="#btnDeleteOnAction" text="Delete" />
-      <JFXButton layoutX="771.0" layoutY="333.0" onAction="#btnUpdateOnAction" text="Update" />
-      <JFXButton layoutX="886.0" layoutY="333.0" onAction="#btnSearchOnAction" text="Search" />
+      <JFXButton layoutX="449.0" layoutY="333.0" onAction="#btnClearOnAction" stylesheets="@../style/crudButton.css" text="Clear">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="549.0" layoutY="333.0" onAction="#btnSaveOnAction" stylesheets="@../style/crudButton.css" text="Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="661.0" layoutY="333.0" onAction="#btnDeleteOnAction" stylesheets="@../style/crudButton.css" text="Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="771.0" layoutY="333.0" onAction="#btnUpdateOnAction" stylesheets="@../style/crudButton.css" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="886.0" layoutY="333.0" onAction="#btnSearchOnAction" stylesheets="@../style/crudButton.css" text="Search">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
       <JFXRadioButton fx:id="male" layoutX="890.0" layoutY="240.0" text="Male" />
       <JFXRadioButton fx:id="female" layoutX="890.0" layoutY="265.0" text="Female" />
       <DatePicker fx:id="date" layoutX="621.0" layoutY="236.0" prefHeight="25.0" prefWidth="199.0" />
