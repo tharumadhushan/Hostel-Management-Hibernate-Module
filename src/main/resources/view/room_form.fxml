@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="666.0" prefWidth="1150.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RoomFormController">
+   <children>
+      <Label layoutX="370.0" layoutY="46.0" prefHeight="39.0" prefWidth="199.0" text="ROOMS FORM">
+         <font>
+            <Font name="Courier New Bold Italic" size="31.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="roomid" layoutX="382.0" layoutY="154.0" opacity="0.25" prefHeight="25.0" prefWidth="199.0" promptText="Enter Room Id..." unFocusColor="#b2b2b2" />
+      <JFXTextField fx:id="roomqty" layoutX="718.0" layoutY="240.0" opacity="0.25" prefHeight="25.0" prefWidth="199.0" promptText="Enter Room Qty..." unFocusColor="#b2b2b2" />
+      <JFXTextField fx:id="roomkeymoney" layoutX="382.0" layoutY="240.0" opacity="0.25" prefHeight="25.0" prefWidth="199.0" promptText="Enter Key Money..." unFocusColor="#b2b2b2" />
+      <JFXTextField fx:id="roomtype" layoutX="718.0" layoutY="154.0" opacity="0.25" prefHeight="25.0" prefWidth="199.0" promptText="Enter Room Type..." unFocusColor="#b2b2b2" />
+      <JFXButton layoutX="456.0" layoutY="321.0" onAction="#btnClearOnAction" text="Clear" />
+      <JFXButton layoutX="556.0" layoutY="321.0" onAction="#btnSaveOnAction" text="Save" />
+      <JFXButton layoutX="668.0" layoutY="321.0" onAction="#btnDeleteOnAction" text="Delete" />
+      <JFXButton layoutX="778.0" layoutY="321.0" onAction="#btnUpdateOnAction" text="Update" />
+      <JFXButton layoutX="893.0" layoutY="321.0" onAction="#btnSearchOnAction" text="Search" />
+      <Label layoutX="382.0" layoutY="130.0" text="Room ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="718.0" layoutY="219.0" text="Qty">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="718.0" layoutY="130.0" text="Room Type">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="382.0" layoutY="219.0" text="Key Money">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="66.0" layoutX="575.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/frame_9697630.png" />
+         </image>
+      </ImageView>
+      <TableView layoutX="425.0" layoutY="396.0" prefHeight="241.0" prefWidth="664.0">
+        <columns>
+          <TableColumn prefWidth="148.0" text="Room ID" />
+          <TableColumn prefWidth="190.0" text="Room Type" />
+            <TableColumn prefWidth="205.0" text="Key Money" />
+            <TableColumn prefWidth="120.0" text="Qty" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="667.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Room.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
