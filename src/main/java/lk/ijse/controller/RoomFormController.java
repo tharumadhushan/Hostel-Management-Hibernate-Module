@@ -15,8 +15,10 @@ import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.RoomBO;
 import lk.ijse.model.ReservationDTO;
 import lk.ijse.model.RoomDTO;
+import lk.ijse.model.StudentDTO;
 import lk.ijse.model.tm.ReservationTM;
 import lk.ijse.model.tm.RoomTM;
+import lk.ijse.model.tm.StudentTM;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -40,19 +42,19 @@ public class RoomFormController implements Initializable {
     private JFXTextField roomtype;
 
     @FXML
-    private TableView<RoomTM> tableRoom;
+    private TableView<RoomTM> tblRoom;
 
     @FXML
-    private TableColumn<?, ?> roomId;
+    private TableColumn<?, ?> rid;
 
     @FXML
-    private TableColumn<?, ?> roomType;
+    private TableColumn<?, ?> rtype;
 
     @FXML
-    private TableColumn<?, ?> keyMny;
+    private TableColumn<?, ?> rkeymoney;
 
     @FXML
-    private TableColumn<?, ?> qty;
+    private TableColumn<?, ?> rqty;
 
     RoomBO roomBO= (RoomBO) BOFactory.getBoFactory().getBo(BOFactory.BOTypes.ROOM);
     ObservableList<RoomTM> observableList;
@@ -264,8 +266,30 @@ public class RoomFormController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        getAll();
-//        setCellValueFactory();
+        getAll();
+        setCellValueFactory();
+    }
+
+    private void setCellValueFactory() {
+        rid.setCellValueFactory(new PropertyValueFactory<>("room_type_id"));
+        rtype.setCellValueFactory(new PropertyValueFactory<>("type"));
+        rkeymoney.setCellValueFactory(new PropertyValueFactory<>("key_money"));
+        rqty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+    }
+
+    private void getAll() {
+        observableList = FXCollections.observableArrayList();
+        List<RoomDTO> allRoom = roomBO.getAllStudent();
+
+        for (RoomDTO roomDTO : allRoom){
+            observableList.add(new RoomTM(
+                    roomDTO.getRoom_type_id(),
+                    roomDTO.getType(),
+                    roomDTO.getKey_money(),
+                    roomDTO.getQty()
+            ));
+        }
+        tblRoom.setItems(observableList);
     }
 
 }

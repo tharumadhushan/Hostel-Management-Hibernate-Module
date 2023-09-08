@@ -7,8 +7,10 @@ import lk.ijse.utill.FactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
+import org.hibernate.query.Query;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class RoomDAOImpl implements RoomDAO {
 
@@ -60,5 +62,16 @@ public class RoomDAOImpl implements RoomDAO {
 
         transaction.commit();
         session.close();
+    }
+
+    @Override
+    public List<Room> getAll() {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Query q = session.createQuery("FROM Room ");
+        List<Room>rooms =q.list();
+        transaction.commit();
+        session.close();
+        return rooms;
     }
 }

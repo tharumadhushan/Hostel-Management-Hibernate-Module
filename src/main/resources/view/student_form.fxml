@@ -79,14 +79,14 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TableView layoutX="410.0" layoutY="392.0" prefHeight="255.0" prefWidth="655.0">
+      <TableView fx:id="tblStudent" layoutX="410.0" layoutY="392.0" prefHeight="255.0" prefWidth="655.0">
         <columns>
-          <TableColumn prefWidth="94.0" text="ID" />
-          <TableColumn prefWidth="126.0" text="Name" />
-            <TableColumn prefWidth="103.0" text="Address" />
-            <TableColumn prefWidth="132.0" text="Contact" />
-            <TableColumn prefWidth="105.0" text="DOB" />
-            <TableColumn prefWidth="94.0" text="Gender" />
+          <TableColumn fx:id="sid" prefWidth="94.0" text="ID" />
+          <TableColumn fx:id="sname" prefWidth="126.0" text="Name" />
+            <TableColumn fx:id="saddress" prefWidth="103.0" text="Address" />
+            <TableColumn fx:id="scontact" prefWidth="132.0" text="Contact" />
+            <TableColumn fx:id="sdob" prefWidth="105.0" text="DOB" />
+            <TableColumn fx:id="sgender" prefWidth="94.0" text="Gender" />
         </columns>
       </TableView>
       <ImageView fitHeight="666.0" fitWidth="341.0" pickOnBounds="true" preserveRatio="true">

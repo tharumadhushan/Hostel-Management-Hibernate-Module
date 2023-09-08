@@ -11,6 +11,7 @@ lk\ijse\controller\DashboardForm.class
 lk\ijse\bo\custom\impl\ReservationBOImpl.class
 lk\ijse\model\tm\RoomTM.class
 lk\ijse\dao\DAOFactory.class
+lk\ijse\model\tm\StudentTM.class
 lk\ijse\dao\custom\StudentDAO.class
 lk\ijse\entity\Reservation.class
 lk\ijse\dao\custom\impl\RoomDAOImpl.class

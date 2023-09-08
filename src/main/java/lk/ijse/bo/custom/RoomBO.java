@@ -4,6 +4,7 @@ import lk.ijse.bo.SuperBo;
 import lk.ijse.model.RoomDTO;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public interface RoomBO extends SuperBo {
     boolean delete(String id) throws SQLException;
@@ -13,4 +14,7 @@ public interface RoomBO extends SuperBo {
     RoomDTO search(String id) throws SQLException;
 
     boolean Update(RoomDTO dto) throws SQLException;
+
+    List<RoomDTO> getAllStudent();
+
 }
