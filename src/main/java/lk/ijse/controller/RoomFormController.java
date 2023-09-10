@@ -163,7 +163,7 @@ public class RoomFormController implements Initializable {
         if (isSave) {
             new Alert(Alert.AlertType.CONFIRMATION, "Room saved successfully").show();
         } else {
-            new Alert(Alert.AlertType.ERROR, "Room saved successfully").show();
+            new Alert(Alert.AlertType.CONFIRMATION, "Room saved successfully").show();
         }
 
         roomid.setText("");

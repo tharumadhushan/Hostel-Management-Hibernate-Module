@@ -142,7 +142,7 @@ public class StudentFormController implements Initializable {
         if (isSave) {
             new Alert(Alert.AlertType.CONFIRMATION, "Student saved successfully").show();
         } else {
-            new Alert(Alert.AlertType.ERROR, "Student saved successfully").show();
+            new Alert(Alert.AlertType.ERROR, "Student not saved").show();
         }
 
         clearAll();
@@ -176,7 +176,7 @@ public class StudentFormController implements Initializable {
             if (isDelete) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Student deleted successfully").show();
             } else {
-                new Alert(Alert.AlertType.ERROR, "Student deleted successfully").show();
+                new Alert(Alert.AlertType.ERROR, "Student not deleted").show();
             }
         } else {
             new Alert(Alert.AlertType.ERROR, "Student not found").show();
